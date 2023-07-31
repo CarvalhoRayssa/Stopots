@@ -1,0 +1,23 @@
+function calcularPontuacao() {
+    const Categorias = document.querySelectorAll('input[type="text"]');
+    const listaCategorias = document.getElementById('categorias');
+    const categoriaDiv = document.getElementById('categorias');
+    const JogarJ = document.getElementById('Jogar');
+  
+    listaCategorias.innerHTML = '';
+    let Jogar = 0;
+  
+    Categorias.forEach((input) => {
+      if (input.value.trim() !== '') {
+        const categoriaItem = document.createElement('li');
+        categoriaItem.textContent = input.value;
+        listaCategorias.appendChild(categoriaItem);
+        jogar++;
+      }
+    });
+  
+    JogarJ.textContent = `Jogar: ${Jogar}`;
+  
+    categoriaDiv.style.display = 'block';
+  }
+  
